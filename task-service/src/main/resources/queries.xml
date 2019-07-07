@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<queries>
+<findUserByEmail>
+		<![CDATA[SELECT
+	    user_id,
+	    first_name,
+	    last_name,
+	    email,
+	    password,
+	    enabled,
+	    password_expires_at,
+	    last_updated
+	FROM
+	    user_details
+	WHERE
+	    email = :email]]>
+</findUserByEmail>
+
+<insertUserDetails>
+	<![CDATA[INSERT INTO user_details (
+    first_name,
+    last_name,
+    email,
+    password
+) VALUES (
+    :firstName,
+    :lastName,
+    :email,
+    :password
+)]]>
+</insertUserDetails>
+</queries>
